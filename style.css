@@ -1,1 +1,681 @@
+/* =======================================
+   RESET
+======================================= */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#fff8fc;
+    color:#222;
+}
+
+/* =======================================
+   TOPO
+======================================= */
+
+.topo{
+
+    width:100%;
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    font-size:14px;
+    font-weight:500;
+
+}
+
+/* =======================================
+   HEADER
+======================================= */
+
+.header{
+
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+
+}
+
+/* =======================================
+   LOGO
+======================================= */
+
+.logo-area{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:18px;
+
+}
+
+.logo{
+
+    width:170px;
+    border-radius:999px;
+    border:4px solid #d4af37;
+    background:white;
+
+}
+
+/* =======================================
+   PESQUISA
+======================================= */
+
+.pesquisa{
+
+    display:flex;
+    gap:10px;
+    padding:15px;
+
+}
+
+#pesquisa{
+
+    flex:1;
+    height:50px;
+    border:none;
+    outline:none;
+    border-radius:40px;
+    padding:0 18px;
+    background:#f3f3f3;
+    font-size:15px;
+
+}
+
+#btnPesquisar{
+
+    width:55px;
+    border:none;
+    border-radius:50%;
+    background:#ff2d87;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+#btnPesquisar:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* =======================================
+   FILTROS
+======================================= */
+
+.filtros{
+
+    display:flex;
+    gap:10px;
+    padding:0 15px 18px;
+
+}
+
+.filtros select{
+
+    flex:1;
+    height:46px;
+    border:none;
+    border-radius:25px;
+    background:#ff2d87;
+    color:white;
+    padding:0 12px;
+    font-weight:600;
+    cursor:pointer;
+
+}
+
+/* =======================================
+   BANNER
+======================================= */
+
+.banner{
+
+    width:100%;
+    padding:12px;
+
+}
+
+.banner img{
+
+    width:100%;
+    border-radius:18px;
+    display:block;
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+}
+
+/* =======================================
+   CATEGORIAS
+======================================= */
+
+.categorias{
+
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    padding:15px;
+
+}
+
+.categorias::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.categorias button{
+
+    white-space:nowrap;
+    border:none;
+    background:#111;
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.25s;
+
+}
+
+.categorias button:hover{
+
+    background:#ff2d87;
+
+}
+
+/* =======================================
+   ÁREA DOS PRODUTOS
+======================================= */
+
+.lista-produtos{
+
+    padding:15px;
+
+}
+
+/* =======================================
+   CARD DOS PRODUTOS
+======================================= */
+
+.lista-produtos{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+
+}
+
+.produto{
+
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.25s;
+    position:relative;
+
+}
+
+.produto:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+/* FOTO */
+
+.imagem{
+
+    position:relative;
+    width:100%;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    background:#f5f5f5;
+
+}
+
+.imagem img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.3s;
+
+}
+
+.produto:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* DESCONTO */
+
+.badge{
+
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#ff2d87;
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+    padding:6px 10px;
+    border-radius:20px;
+
+}
+
+/* FAVORITO */
+
+.favorito{
+
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:#ff2d87;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+/* CONTEÚDO */
+
+.info{
+
+    padding:12px;
+
+}
+
+.info h3{
+
+    font-size:15px;
+    color:#222;
+    height:42px;
+    overflow:hidden;
+
+}
+
+/* AVALIAÇÃO */
+
+.avaliacao{
+
+    margin-top:6px;
+    color:#FFD700;
+    font-size:13px;
+
+}
+
+.avaliacao span{
+
+    color:#777;
+
+}
+
+/* PREÇOS */
+
+.preco{
+
+    margin-top:10px;
+    color:#ff2d87;
+    font-size:23px;
+    font-weight:700;
+
+}
+
+.preco-antigo{
+
+    color:#999;
+    text-decoration:line-through;
+    font-size:14px;
+    margin-top:3px;
+
+}
+
+.menor-preco{
+
+    color:#16a34a;
+    font-size:13px;
+    margin-top:5px;
+    font-weight:600;
+
+}
+
+/* TAMANHOS */
+
+.tamanhos{
+
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    margin-top:12px;
+
+}
+
+.tamanhos span{
+
+    background:#111;
+    color:#fff;
+    padding:5px 9px;
+    border-radius:15px;
+    font-size:11px;
+
+}
+
+/* BOTÃO */
+
+.comprar{
+
+    width:100%;
+    margin-top:15px;
+    height:45px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(90deg,#ff2d87,#ff6bb5);
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+.comprar:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:480px){
+
+.info h3{
+
+font-size:14px;
+
+}
+
+.preco{
+
+font-size:20px;
+
+}
+
+.comprar{
+
+height:42px;
+font-size:14px;
+
+}
+
+  }
+/* =======================================
+   PÁGINA DO PRODUTO
+======================================= */
+
+.produto-page{
+
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+
+}
+
+.galeria{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.galeria img{
+
+    width:100%;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.detalhes{
+
+    margin-top:20px;
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.nome-produto{
+
+    font-size:28px;
+    font-weight:700;
+    color:#222;
+
+}
+
+.preco-produto{
+
+    margin-top:15px;
+    font-size:34px;
+    color:#ff2d87;
+    font-weight:bold;
+
+}
+
+.preco-antigo-produto{
+
+    text-decoration:line-through;
+    color:#888;
+    margin-top:5px;
+
+}
+
+.descricao{
+
+    margin-top:20px;
+    color:#555;
+    line-height:1.7;
+
+}
+
+/* TAMANHOS */
+
+.escolha-tamanho{
+
+    margin-top:25px;
+
+}
+
+.escolha-tamanho h3{
+
+    margin-bottom:10px;
+
+}
+
+.lista-tamanhos{
+
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+
+}
+
+.lista-tamanhos button{
+
+    width:50px;
+    height:45px;
+    border:none;
+    border-radius:12px;
+    background:#f3f3f3;
+    cursor:pointer;
+    font-weight:600;
+    transition:.25s;
+
+}
+
+.lista-tamanhos button:hover{
+
+    background:#ff2d87;
+    color:white;
+
+}
+
+.lista-tamanhos button.ativo{
+
+    background:#111;
+    color:white;
+
+}
+
+/* BOTÃO WHATSAPP */
+
+.btn-whatsapp{
+
+    width:100%;
+    margin-top:30px;
+    padding:18px;
+    border:none;
+    border-radius:35px;
+    background:#25D366;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+.btn-whatsapp:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* RODAPÉ */
+
+footer{
+
+    margin-top:40px;
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+
+}
+
+footer h3{
+
+    margin-bottom:10px;
+
+}
+
+footer p{
+
+    color:#ddd;
+    font-size:14px;
+    line-height:1.6;
+
+}
+
+/* ANIMAÇÕES */
+
+.fade{
+
+    animation:fade .4s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff2d87;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f3f3f3;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.produto-page{
+
+padding:15px;
+
+}
+
+.nome-produto{
+
+font-size:24px;
+
+}
+
+.preco-produto{
+
+font-size:28px;
+
+}
+
+.btn-whatsapp{
+
+font-size:16px;
+
+}
+
+}
