@@ -1,291 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Moda Feminina Gurupá</title>
+    <title>Fashion Gurupá</title>
 
-<style>
+    <link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-background:#fff5fa;
-color:#222;
-}
-
-/* TOPO */
-
-header{
-
-background:#000;
-
-padding:20px;
-
-text-align:center;
-
-}
-
-.logo{
-
-width:220px;
-
-height:90px;
-
-margin:auto;
-
-border-radius:999px;
-
-background:linear-gradient(135deg,#ff1493,#ffd700);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-font-size:28px;
-
-font-weight:bold;
-
-border:4px solid gold;
-
-}
-
-.local{
-
-margin-top:15px;
-
-display:inline-block;
-
-background:#ff1493;
-
-padding:10px 20px;
-
-border-radius:25px;
-
-color:white;
-
-font-weight:bold;
-
-}
-
-/* PESQUISA */
-
-.pesquisa{
-
-padding:15px;
-
-}
-
-#pesquisar{
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:30px;
-
-font-size:16px;
-
-box-shadow:0 5px 12px rgba(0,0,0,.15);
-
-outline:none;
-
-}
-
-/* FILTROS */
-
-.filtros{
-
-display:flex;
-
-gap:10px;
-
-padding:0 15px 15px;
-
-}
-
-.filtros select{
-
-flex:1;
-
-padding:12px;
-
-border:none;
-
-border-radius:25px;
-
-background:#ff1493;
-
-color:white;
-
-font-weight:bold;
-
-}
-
-/* PRODUTOS */
-
-#produtos{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:12px;
-
-padding:15px;
-
-}
-
-.produto{
-
-background:white;
-
-border-radius:18px;
-
-overflow:hidden;
-
-border:2px solid gold;
-
-box-shadow:0 4px 12px rgba(0,0,0,.15);
-
-}
-
-.imagem{
-
-height:140px;
-
-background:linear-gradient(135deg,#ff8fc8,#ff1493);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-font-size:20px;
-
-font-weight:bold;
-
-}
-
-.produto h3{
-
-padding:10px;
-
-font-size:15px;
-
-min-height:45px;
-
-}
-
-.preco{
-
-padding:0 10px;
-
-font-size:24px;
-
-font-weight:bold;
-
-color:#ff1493;
-
-}
-
-.info{
-
-padding:2px 10px;
-
-font-size:13px;
-
-}
-
-.desconto{
-
-margin:10px;
-
-background:gold;
-
-text-align:center;
-
-padding:8px;
-
-border-radius:20px;
-
-font-weight:bold;
-
-}
-
-.tamanhos{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:5px;
-
-padding:0 10px 10px;
-
-}
-
-.tamanhos span{
-
-background:#000;
-
-color:white;
-
-padding:5px 8px;
-
-border-radius:15px;
-
-font-size:11px;
-
-}
-
-button{
-
-width:calc(100% - 20px);
-
-margin:10px;
-
-padding:12px;
-
-background:#ff1493;
-
-color:white;
-
-border:none;
-
-border-radius:25px;
-
-font-size:15px;
-
-font-weight:bold;
-
-}
-
-button:hover{
-
-background:#d10073;
-
-}
-
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -293,258 +21,285 @@ background:#d10073;
 
 <header>
 
-<div class="logo">
+    <div class="top-bar">
 
-Fashion
+        <span>🚚 Entregando em Gurupá - PA</span>
 
-</div>
+    </div>
 
-<div class="local">
+    <div class="logo-area">
 
-📍 Entregando em Gurupá - PA
+        <img src="imagens/logo.png" class="logo">
 
-</div>
+    </div>
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="pesquisar"
+            placeholder="Pesquisar roupas...">
+
+        <button id="btnPesquisar">
+
+            🔍
+
+        </button>
+
+    </div>
+
+    <div class="filters">
+
+        <select id="filtroPreco">
+
+            <option value="">⭐ Populares</option>
+
+            <option value="menor">
+                Menor preço
+            </option>
+
+            <option value="maior">
+                Maior preço
+            </option>
+
+            <option value="desconto">
+                Melhor desconto
+            </option>
+
+        </select>
+
+        <select id="filtroTamanho">
+
+            <option value="">👗 Tamanho</option>
+
+            <option value="PP">PP</option>
+
+            <option value="P">P</option>
+
+            <option value="M">M</option>
+
+            <option value="G">G</option>
+
+            <option value="GG">GG</option>
+
+            <option value="XG">XG</option>
+
+            <option value="48">48</option>
+
+            <option value="50">50</option>
+
+            <option value="52">52</option>
+
+        </select>
+
+    </div>
 
 </header>
 
-<section class="pesquisa">
+<main>
 
-<input
-id="pesquisar"
-type="text"
-placeholder="🔍 Pesquise uma roupa...">
+<section class="banner">
 
-</section>
-
-<section class="filtros">
-
-<select id="filtroPreco">
-
-<option value="">⭐ Populares</option>
-
-<option value="menor">Menor preço</option>
-
-<option value="maior">Maior preço</option>
-
-<option value="desconto">Melhor desconto</option>
-
-</select>
-
-<select id="filtroTamanho">
-
-<option value="">👗 Tamanho</option>
-
-<option>PP</option>
-<option>P</option>
-<option>M</option>
-<option>G</option>
-<option>GG</option>
-<option>XG</option>
-<option>48</option>
-<option>50</option>
-<option>52</option>
-
-</select>
+    <img src="imagens/banner.jpg" alt="Banner">
 
 </section>
 
-<section id="produtos">
-  
+<section class="titulo">
 
-    
-<!-- PRODUTO 1 -->
-<div class="produto" data-name="Vestido Floral" data-price="149.90" data-discount="30" data-size="P M G GG">
-<div class="imagem">👗</div>
-<h3>Vestido Floral</h3>
-<div class="preco">R$149,90</div>
-<div class="info">Menor preço: R$129,90</div>
-<div class="info">Maior preço: R$219,90</div>
-<div class="desconto">30% OFF</div>
-<div class="tamanhos">
-<span>P</span><span>M</span><span>G</span><span>GG</span>
-</div>
-<button>Comprar</button>
-</div>
-
-<!-- PRODUTO 2 -->
-<div class="produto" data-name="Blusa Premium" data-price="89.90" data-discount="20" data-size="PP P M">
-<div class="imagem">👚</div>
-<h3>Blusa Premium</h3>
-<div class="preco">R$89,90</div>
-<div class="info">Menor preço: R$79,90</div>
-<div class="info">Maior preço: R$119,90</div>
-<div class="desconto">20% OFF</div>
-<div class="tamanhos">
-<span>PP</span><span>P</span><span>M</span>
-</div>
-<button>Comprar</button>
-</div>
-
-<!-- PRODUTO 3 -->
-<div class="produto" data-name="Saia Jeans" data-price="69.90" data-discount="18" data-size="P M G">
-<div class="imagem">👖</div>
-<h3>Saia Jeans</h3>
-<div class="preco">R$69,90</div>
-<div class="info">Menor preço: R$59,90</div>
-<div class="info">Maior preço: R$89,90</div>
-<div class="desconto">18% OFF</div>
-<div class="tamanhos">
-<span>P</span><span>M</span><span>G</span>
-</div>
-<button>Comprar</button>
-</div>
-
-<!-- PRODUTO 4 -->
-<div class="produto" data-name="Calça Social" data-price="159.90" data-discount="35" data-size="M G GG">
-<div class="imagem">👖</div>
-<h3>Calça Social</h3>
-<div class="preco">R$159,90</div>
-<div class="info">Menor preço: R$139,90</div>
-<div class="info">Maior preço: R$239,90</div>
-<div class="desconto">35% OFF</div>
-<div class="tamanhos">
-<span>M</span><span>G</span><span>GG</span>
-</div>
-<button>Comprar</button>
-</div>
-
-<!-- PRODUTO 5 -->
-<div class="produto" data-name="Conjunto Elegance" data-price="229.90" data-discount="40" data-size="P M G">
-<div class="imagem">👗</div>
-<h3>Conjunto Elegance</h3>
-<div class="preco">R$229,90</div>
-<div class="info">Menor preço: R$199,90</div>
-<div class="info">Maior preço: R$329,90</div>
-<div class="desconto">40% OFF</div>
-<div class="tamanhos">
-<span>P</span><span>M</span><span>G</span>
-</div>
-<button>Comprar</button>
-</div>
-
-<!-- PRODUTO 6 -->
-<div class="produto" data-name="Jaqueta Fashion" data-price="189.90" data-discount="28" data-size="G GG XG">
-<div class="imagem">🧥</div>
-<h3>Jaqueta Fashion</h3>
-<div class="preco">R$189,90</div>
-<div class="info">Menor preço: R$169,90</div>
-<div class="info">Maior preço: R$259,90</div>
-<div class="desconto">28% OFF</div>
-<div class="tamanhos">
-<span>G</span><span>GG</span><span>XG</span>
-</div>
-<button>Comprar</button>
-</div>
-
-<!-- PRODUTO 7 -->
-<div class="produto" data-name="Vestido Longo" data-price="199.90" data-discount="25" data-size="M G GG">
-<div class="imagem">👗</div>
-<h3>Vestido Longo</h3>
-<div class="preco">R$199,90</div>
-<div class="info">Menor preço: R$179,90</div>
-<div class="info">Maior preço: R$269,90</div>
-<div class="desconto">25% OFF</div>
-<div class="tamanhos">
-<span>M</span><span>G</span><span>GG</span>
-</div>
-<button>Comprar</button>
-</div>
-
-<!-- PRODUTO 8 -->
-<div class="produto" data-name="Short Jeans" data-price="79.90" data-discount="22" data-size="PP P M G">
-<div class="imagem">🩳</div>
-<h3>Short Jeans</h3>
-<div class="preco">R$79,90</div>
-<div class="info">Menor preço: R$69,90</div>
-<div class="info">Maior preço: R$99,90</div>
-<div class="desconto">22% OFF</div>
-<div class="tamanhos">
-<span>PP</span><span>P</span><span>M</span><span>G</span>
-</div>
-<button>Comprar</button>
-</div>
+    <h2>Novidades da Semana</h2>
 
 </section>
 
-<script>
+<section id="produtos" class="produtos">
 
-const pesquisar = document.getElementById("pesquisar");
-const filtroPreco = document.getElementById("filtroPreco");
-const filtroTamanho = document.getElementById("filtroTamanho");
-const produtos = document.getElementById("produtos");
+  <!-- Produto 1 -->
+<div class="produto"
+     data-name="Vestido Floral"
+     data-price="149.90"
+     data-discount="30"
+     data-size="P M G GG">
 
-let cards = [...document.querySelectorAll(".produto")];
+    <div class="imagem">
+        <img src="imagens/produto1.jpg" alt="Vestido Floral">
+        <span class="badge">30% OFF</span>
+        <button class="favorito">❤</button>
+    </div>
 
-function atualizar(){
+    <div class="info">
 
-    let texto = pesquisar.value.toLowerCase();
-    let tamanho = filtroTamanho.value;
+        <h3>Vestido Floral Elegance</h3>
 
-    cards.forEach(card=>{
+        <div class="avaliacao">
+            ⭐⭐⭐⭐⭐ <span>(128)</span>
+        </div>
 
-        let nome = card.dataset.name.toLowerCase();
-        let tamanhos = card.dataset.size.split(" ");
+        <p class="preco">
+            R$149,90
+        </p>
 
-        let mostrar =
-            nome.includes(texto) &&
-            (tamanho==="" || tamanhos.includes(tamanho));
+        <p class="preco-antigo">
+            R$219,90
+        </p>
 
-        card.style.display = mostrar ? "block" : "none";
+        <p class="menor-preco">
+            Menor preço: R$129,90
+        </p>
 
-    });
+        <div class="tamanhos">
+            <span>P</span>
+            <span>M</span>
+            <span>G</span>
+            <span>GG</span>
+        </div>
 
-}
+        <button class="comprar">
+            Comprar
+        </button>
 
-function ordenar(){
+    </div>
 
-    let ordem = filtroPreco.value;
+</div>
 
-    cards.sort((a,b)=>{
+<!-- Produto 2 -->
 
-        if(ordem==="menor"){
-            return Number(a.dataset.price)-Number(b.dataset.price);
-        }
+<div class="produto"
+     data-name="Blusa Premium"
+     data-price="89.90"
+     data-discount="20"
+     data-size="PP P M">
 
-        if(ordem==="maior"){
-            return Number(b.dataset.price)-Number(a.dataset.price);
-        }
+    <div class="imagem">
+        <img src="imagens/produto2.jpg" alt="Blusa Premium">
+        <span class="badge">20% OFF</span>
+        <button class="favorito">❤</button>
+    </div>
 
-        if(ordem==="desconto"){
-            return Number(b.dataset.discount)-Number(a.dataset.discount);
-        }
+    <div class="info">
 
-        return 0;
+        <h3>Blusa Premium Rosa</h3>
 
-    });
+        <div class="avaliacao">
+            ⭐⭐⭐⭐⭐ <span>(87)</span>
+        </div>
 
-    cards.forEach(card=>produtos.appendChild(card));
+        <p class="preco">
+            R$89,90
+        </p>
 
-}
+        <p class="preco-antigo">
+            R$119,90
+        </p>
 
-pesquisar.addEventListener("keyup",()=>{
+        <p class="menor-preco">
+            Menor preço: R$79,90
+        </p>
 
-    atualizar();
+        <div class="tamanhos">
+            <span>PP</span>
+            <span>P</span>
+            <span>M</span>
+        </div>
 
-});
+        <button class="comprar">
+            Comprar
+        </button>
 
-filtroTamanho.addEventListener("change",()=>{
+    </div>
 
-    atualizar();
+</div>
 
-});
+<!-- Produto 3 -->
 
-filtroPreco.addEventListener("change",()=>{
+<div class="produto"
+     data-name="Calça Jeans"
+     data-price="129.90"
+     data-discount="25"
+     data-size="M G GG">
 
-    ordenar();
-    atualizar();
+    <div class="imagem">
+        <img src="imagens/produto3.jpg" alt="Calça Jeans">
+        <span class="badge">25% OFF</span>
+        <button class="favorito">❤</button>
+    </div>
 
-});
+    <div class="info">
 
-atualizar();
+        <h3>Calça Jeans Slim</h3>
 
-</script>
+        <div class="avaliacao">
+            ⭐⭐⭐⭐⭐ <span>(203)</span>
+        </div>
 
-</body>
+        <p class="preco">
+            R$129,90
+        </p>
 
-</html>
+        <p class="preco-antigo">
+            R$179,90
+        </p>
 
+        <p class="menor-preco">
+            Menor preço: R$109,90
+        </p>
+
+        <div class="tamanhos">
+            <span>M</span>
+            <span>G</span>
+            <span>GG</span>
+        </div>
+
+        <button class="comprar">
+            Comprar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Produto 4 -->
+
+<div class="produto"
+     data-name="Conjunto Luxo"
+     data-price="229.90"
+     data-discount="40"
+     data-size="P M G">
+
+    <div class="imagem">
+        <img src="imagens/produto4.jpg" alt="Conjunto Luxo">
+        <span class="badge">40% OFF</span>
+        <button class="favorito">❤</button>
+    </div>
+
+    <div class="info">
+
+        <h3>Conjunto Luxo Feminino</h3>
+
+        <div class="avaliacao">
+            ⭐⭐⭐⭐⭐ <span>(314)</span>
+        </div>
+
+        <p class="preco">
+            R$229,90
+        </p>
+
+        <p class="preco-antigo">
+            R$359,90
+        </p>
+
+        <p class="menor-preco">
+            Menor preço: R$199,90
+        </p>
+
+        <div class="tamanhos">
+            <span>P</span>
+            <span>M</span>
+            <span>G</span>
+        </div>
+
+        <button class="comprar">
+            Comprar
+        </button>
+
+    </div>
+
+</div>
