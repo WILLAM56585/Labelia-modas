@@ -3,303 +3,163 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fashion Gurupá</title>
+<title>Fashion Gurupá</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-    <div class="top-bar">
+<div class="topo">
 
-        <span>🚚 Entregando em Gurupá - PA</span>
+<p>🚚 Entregamos em Gurupá - PA</p>
 
-    </div>
+</div>
 
-    <div class="logo-area">
+<div class="logo-area">
 
-        <img src="imagens/logo.png" class="logo">
+<img src="img/logo.png" class="logo">
 
-    </div>
+</div>
 
-    <div class="search-area">
+<div class="pesquisa">
 
-        <input
-            type="text"
-            id="pesquisar"
-            placeholder="Pesquisar roupas...">
+<input
+type="text"
+id="pesquisa"
+placeholder="Pesquisar roupas...">
 
-        <button id="btnPesquisar">
+<button id="btnPesquisar">
 
-            🔍
+🔍
 
-        </button>
+</button>
 
-    </div>
+</div>
 
-    <div class="filters">
+<div class="filtros">
 
-        <select id="filtroPreco">
+<select id="ordenar">
 
-            <option value="">⭐ Populares</option>
+<option value="todos">
 
-            <option value="menor">
-                Menor preço
-            </option>
+⭐ Populares
 
-            <option value="maior">
-                Maior preço
-            </option>
+</option>
 
-            <option value="desconto">
-                Melhor desconto
-            </option>
+<option value="menor">
 
-        </select>
+Menor preço
 
-        <select id="filtroTamanho">
+</option>
 
-            <option value="">👗 Tamanho</option>
+<option value="maior">
 
-            <option value="PP">PP</option>
+Maior preço
 
-            <option value="P">P</option>
+</option>
 
-            <option value="M">M</option>
+<option value="desconto">
 
-            <option value="G">G</option>
+Maior desconto
 
-            <option value="GG">GG</option>
+</option>
 
-            <option value="XG">XG</option>
+</select>
 
-            <option value="48">48</option>
+<select id="tamanho">
 
-            <option value="50">50</option>
+<option value="">
 
-            <option value="52">52</option>
+👗 Tamanho
 
-        </select>
+</option>
 
-    </div>
+<option value="PP">PP</option>
+
+<option value="P">P</option>
+
+<option value="M">M</option>
+
+<option value="G">G</option>
+
+<option value="GG">GG</option>
+
+<option value="XG">XG</option>
+
+<option value="48">48</option>
+
+<option value="50">50</option>
+
+<option value="52">52</option>
+
+</select>
+
+</div>
 
 </header>
 
-<main>
-
 <section class="banner">
 
-    <img src="imagens/banner.jpg" alt="Banner">
+<img src="img/banner.jpg">
 
 </section>
 
-<section class="titulo">
+<section class="categorias">
 
-    <h2>Novidades da Semana</h2>
+<button>Todos</button>
+
+<button>Vestidos</button>
+
+<button>Blusas</button>
+
+<button>Calças</button>
+
+<button>Shorts</button>
+
+<button>Conjuntos</button>
 
 </section>
 
-<section id="produtos" class="produtos">
+<main>
 
-  <!-- Produto 1 -->
-<div class="produto"
-     data-name="Vestido Floral"
-     data-price="149.90"
-     data-discount="30"
-     data-size="P M G GG">
+<div id="listaProdutos" class="lista-produtos">
 
-    <div class="imagem">
-        <img src="imagens/produto1.jpg" alt="Vestido Floral">
-        <span class="badge">30% OFF</span>
-        <button class="favorito">❤</button>
-    </div>
-
-    <div class="info">
-
-        <h3>Vestido Floral Elegance</h3>
-
-        <div class="avaliacao">
-            ⭐⭐⭐⭐⭐ <span>(128)</span>
-        </div>
-
-        <p class="preco">
-            R$149,90
-        </p>
-
-        <p class="preco-antigo">
-            R$219,90
-        </p>
-
-        <p class="menor-preco">
-            Menor preço: R$129,90
-        </p>
-
-        <div class="tamanhos">
-            <span>P</span>
-            <span>M</span>
-            <span>G</span>
-            <span>GG</span>
-        </div>
-
-        <button class="comprar">
-            Comprar
-        </button>
-
-    </div>
+<!--
+Os produtos serão criados automaticamente
+pelo JavaScript.
+-->
 
 </div>
 
-<!-- Produto 2 -->
+</main>
 
-<div class="produto"
-     data-name="Blusa Premium"
-     data-price="89.90"
-     data-discount="20"
-     data-size="PP P M">
+<footer>
 
-    <div class="imagem">
-        <img src="imagens/produto2.jpg" alt="Blusa Premium">
-        <span class="badge">20% OFF</span>
-        <button class="favorito">❤</button>
-    </div>
+<p>
 
-    <div class="info">
+© Fashion Gurupá
 
-        <h3>Blusa Premium Rosa</h3>
+</p>
 
-        <div class="avaliacao">
-            ⭐⭐⭐⭐⭐ <span>(87)</span>
-        </div>
+</footer>
 
-        <p class="preco">
-            R$89,90
-        </p>
+<script src="produtos.js"></script>
 
-        <p class="preco-antigo">
-            R$119,90
-        </p>
+<script src="script.js"></script>
 
-        <p class="menor-preco">
-            Menor preço: R$79,90
-        </p>
+</body>
 
-        <div class="tamanhos">
-            <span>PP</span>
-            <span>P</span>
-            <span>M</span>
-        </div>
-
-        <button class="comprar">
-            Comprar
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Produto 3 -->
-
-<div class="produto"
-     data-name="Calça Jeans"
-     data-price="129.90"
-     data-discount="25"
-     data-size="M G GG">
-
-    <div class="imagem">
-        <img src="imagens/produto3.jpg" alt="Calça Jeans">
-        <span class="badge">25% OFF</span>
-        <button class="favorito">❤</button>
-    </div>
-
-    <div class="info">
-
-        <h3>Calça Jeans Slim</h3>
-
-        <div class="avaliacao">
-            ⭐⭐⭐⭐⭐ <span>(203)</span>
-        </div>
-
-        <p class="preco">
-            R$129,90
-        </p>
-
-        <p class="preco-antigo">
-            R$179,90
-        </p>
-
-        <p class="menor-preco">
-            Menor preço: R$109,90
-        </p>
-
-        <div class="tamanhos">
-            <span>M</span>
-            <span>G</span>
-            <span>GG</span>
-        </div>
-
-        <button class="comprar">
-            Comprar
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Produto 4 -->
-
-<div class="produto"
-     data-name="Conjunto Luxo"
-     data-price="229.90"
-     data-discount="40"
-     data-size="P M G">
-
-    <div class="imagem">
-        <img src="imagens/produto4.jpg" alt="Conjunto Luxo">
-        <span class="badge">40% OFF</span>
-        <button class="favorito">❤</button>
-    </div>
-
-    <div class="info">
-
-        <h3>Conjunto Luxo Feminino</h3>
-
-        <div class="avaliacao">
-            ⭐⭐⭐⭐⭐ <span>(314)</span>
-        </div>
-
-        <p class="preco">
-            R$229,90
-        </p>
-
-        <p class="preco-antigo">
-            R$359,90
-        </p>
-
-        <p class="menor-preco">
-            Menor preço: R$199,90
-        </p>
-
-        <div class="tamanhos">
-            <span>P</span>
-            <span>M</span>
-            <span>G</span>
-        </div>
-
-        <button class="comprar">
-            Comprar
-        </button>
-
-    </div>
-
-</div>
+</html>
