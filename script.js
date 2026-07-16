@@ -253,3 +253,5 @@ document.addEventListener("click", function(e){
     alert("Página do produto em desenvolvimento.\nProduto ID: " + id);
 
 });
+
+
